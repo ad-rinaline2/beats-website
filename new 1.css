@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+.header{
+	width:100%;
+	height:100%;
+	background-image: url(file:///C:/Users/Arindol/Downloads/Frame%202.svg);
+	background-size: cover;
+}
+ nav{
+	display: flex;
+	padding: 2% 6%;
+    justify-content: space-between;
+	align-items: center;                
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style:none;
+	display: inline-block;
+	padding:8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;  
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.2s;
+}
+.nav-links ul li:hover::after{
+	width:100%;
+}
+ nav.fas.fa{
+	 display: none;
+ }	 
+ @media(max-width:700px){	
+    .nav-links ul li{
+        	display: block;
+     }
+    .nav-links{
+         position: absolute;
+         background: #f44336;
+         height: 100vh;
+         width: 200px;
+         top: 0;
+         right: -200px;
+         text-align: left;
+         z-index: 2;
+		 transition: 1s;
+    }
+	nav .fas.fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+    .nav-links ul{
+        padding:30px;
+    }		
+ } 
+ /*
+ <!----
+ * {box-sizing:border-box}
+
+/* Slideshow container */
+ /*
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default 
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right 
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+ On hover, add a black background color with a little bit see-through *
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text *
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) 
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+----> 
+*/
+  .products{
+	  width: 80%;
+	  margin: auto;
+	  text-align: center;
+	  padding-top: 100px;
+  }
+  h1{
+	  font-size: 36px;
+	  font-weight: 600;
+  }  
+  .row{
+	  margin-top: 5%;
+	  display: flex;
+	  justify-content: space-between;
+  }
+  .pro-col{
+	  flex-basis: 31%;
+	  background: #E7D7D4;
+	  border-radius: 10px;
+	  margin-bottom: 5%;
+	  padding: 20px 12px;
+	  box-sizing: border-box;
+	  transition: 0.5s;
+  }
+  .pro-col:hover{
+	  box-shadow: 0 0 2px 0px rgba(0,0,0,0.2);
+  }
+  @media(max-width: 700px){
+	  .row{
+		  flex-direction: column;
+	  }
+  }
+  .layer p{
+	  width: 100%;
+	  font-weight: 500;
+	  color: #fff;
+	  font-size: 26px;
+	  bottom: 0;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  position: absolute;
+	  opacity: 0;
+	  transition: 0.5s;
+  }
+  .layer:hover p{
+	  bottom: 49%;
+	  opacity:1;
+  }
+  .footer{
+	  width:100%;
+	  text-align:center;
+	  padding:30px 0;
+  }
+  .footer:h4{
+	  margin-bottom: 25px;
+	  margin-top: 20px;
+	  font-weight: 600;
+  }
+  .sub-header{
+	  height:50vh;
+	  weight:100%;
+	  background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7aeadf31200183.564554c19ad43.jpg);
+	  background-position: center;
+	  background-size:cover;
+	  text-align:center;
+	  color:#fff;
+  }  
+  .about-us{
+      width: 80%;
+      margin: auto;	  
+	  padding-top:80px;
+	  padding-bottom: 50px;
+  }
+  .about-col{
+       flex-basis: 48%;
+       padding: 30px 2px;
+  }
+  .about-col img{
+      width: 100%;
+  }
+  .about-col h1{
+      padding: 15px 0 25px ;
+  }
+  .about-col p{
+      padding: 15px 0 25px;
+  }	  
+  .models{
+	  width: 80%;
+	  margin: auto;
+	  text-align: center;
+	  padding-top: 100px;
+  }
+  .reviews{
+	  width: 80%;
+	  margin: auto;
+	  text-align: center;
+	  padding-top: 100px;
+  }
+  /*
+  .profile{
+	  width: 80%;
+	  margin: auto;
+	  text-align: center;
+	  padding-top: 100px;
+  }
+  */
+  .box-con{
+	  display: flex;
+	  justify-content:center;
+	  align-items: center;
+	  flex-wrap: wrap;
+  }
+  .box1{
+	  width:1000px;
+	  box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+	  background-color: #ffffff;
+	  padding: 20px;
+	  margin: 15px;
+	  cursor: pointer:
+  }  
+  .profile-img{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  overflow:hidden;
+	  margin-right:10px;
+  }
+  .profile-img img{
+	  width: 100%;
+	  height: 100%;
+	  object-fit:cover;
+	  object-position:center;
+  }
+  .profile{
+	  display: flex;
+	  align-items: center;
+  }
+  .name-user{
+	  display: flex;
+	  flex-direction:column;
+  }
+  .name-user strong{
+	  color: #3d3d3d;
+	  font-size: 1.1rem;
+	  letter-spacing: 0.5px;
+  }
+  .name-user span{
+	  color:#979797;
+	  font-size: 0.8rem;
+  }
+  .stars{
+	  color:#f9d71c;
+  }
+  .box-top{
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  margin-bottom: 20px;
+  }
+  .comments p{
+       font-size:0.9rem;
+       color:#4b4b4b;
+  }
+  .box1:hover{
+      transform: translateY(-10px);
+      transform: all ease 0.3s;
+  }
+ @media(max-width:700px){
+      .box1{
+         width: 45%;
+         padding:10px;
+	  }
+ }
+  .cart-page{
+	  margin: 80px auto;
+  }
+  table{
+       width:100%;
+       border-collapse:collapse;
+  }
+  .cart-info{
+	  display: flex;
+	  flex-wrap:wrap;
+  }
+  th{
+	  text-align:left;
+	  padding:5px;
+	  color:#fff;
+	  background:#215665;
+	  font-weight:normal;
+  }
+  td input{
+	  width:40px;
+	  height:30px;
+	  padding:5px;
+  }
+  td a{
+	  color:#ff523b;
+	  font-size:12px;
+  }
+  td img{
+	  width:80px;
+	  height:80px;
+	  margin-right:10px;
+  }
+  .total-price{
+	  display:flex;
+	  justify-content:flex-end;
+  }
+  .total-price table{
+	  border-top: 3px solid #215665;
+	  width:100%;
+	  max-width:490px;   
+  }
+  td:last-child{
+	  text-align:right;
+  }
+  th:last-child{
+	  text-align:right;
+  }
+  .cart-header{
+	  height:50vh;
+	  weight:100%;
+	  background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://mms.businesswire.com/media/20160907006808/en/543018/5/B3-FAMILY.jpg);
+	  background-position: center;
+	  background-size:cover;
+	  text-align:center;
+	  color:#fff;
+  }   
+  .footer{
+     background:#E0F2F7;
+}
